@@ -56,7 +56,7 @@ header h1 {
 
 /* Form Section  */
 
-form {
+.form {
   max-width: 530px;
   padding: 95px 0;
 }
