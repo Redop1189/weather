@@ -28,6 +28,11 @@ h3 {
   font-weight: 500;
 }
 
+h5 {
+  font-weight: 400;
+  font-size: 11px;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -112,7 +117,16 @@ button img {
 
 @media screen and (max-width: 768px) {
   .s-slider-search-form {
-    max-width: 400px;
+    max-width: 350px;
+  }
+
+  .s-slider-search-form input {
+    padding: 16px 25px;
+  }
+
+  .t-slider-search-form button {
+    height: 48px;
+    width: 48px;
   }
 }
 
@@ -126,8 +140,40 @@ button img {
   padding: 28px 61px;
   align-self: center;
   box-shadow: 0px 0px 50px rgba(102, 107, 208, 0.5);
+  transition: 1s ease;
 }
 
 .temp {
   margin-top: 70px;
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+}
+
+.version {
+  position: relative;
+  margin-top: 50px;
+}
+
+header h5 {
+  color: #fff;
+  background-color: #555555;
+  display: inline-block;
+  padding: 0 0 0 7px;
+  margin: 25px 10px;
+  margin-bottom: 0;
+}
+
+#count {
+  display: inline-block;
+  background-color: #fe7d37;
+  padding: 3px 5px;
+  margin-left: 5px;
 }
