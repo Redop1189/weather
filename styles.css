@@ -46,6 +46,7 @@ header h1 {
   font-size: 50px;
   font-weight: 600;
   color: #353778;
+  cursor: default;
 }
 
 .hlt {
@@ -144,17 +145,49 @@ button img {
   border-radius: 35px;
   padding: 28px 61px;
   align-self: center;
+  cursor: default;
   box-shadow: 0px 0px 50px rgba(102, 107, 208, 0.5);
   transition: 1s ease;
 }
 
-.cityHeading {
-  transform: translateZ(30px);
+.cityHeading h4 {
+  transform: translateZ(65px);
+  transition: 0.5s ease;
+}
+
+.cityHeading h4:hover {
+  transform: translateZ(100px);
+}
+
+.cityHeading h2 {
+  transform: translateZ(50px);
+  transition: 0.5s ease;
+}
+
+.cityHeading h2:hover {
+  transform: translateZ(90px);
 }
 
 .temp {
   margin-top: 70px;
-  transform: translateZ(20px);
+}
+
+.temp h2 {
+  transform: translateZ(70px);
+  transition: 0.5s ease;
+}
+
+.temp h2:hover {
+  transform: translateZ(110px);
+}
+
+.temp h3 {
+  transform: translateZ(40px);
+  transition: 0.5s ease;
+}
+
+.temp h3:hover {
+  transform: translateZ(60px);
 }
 
 @media screen and (max-width: 768px) {
@@ -190,4 +223,8 @@ header h5 {
 
 .counter {
   margin: 25px 10px;
+}
+
+.js-tilt-glare {
+  border-radius: 35px;
 }
