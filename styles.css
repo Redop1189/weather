@@ -132,6 +132,11 @@ button img {
 
 /* Card Section  */
 
+.threed {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+}
+
 .card {
   display: inline-block;
   color: #fff;
@@ -143,8 +148,13 @@ button img {
   transition: 1s ease;
 }
 
+.cityHeading {
+  transform: translateZ(30px);
+}
+
 .temp {
   margin-top: 70px;
+  transform: translateZ(20px);
 }
 
 @media screen and (max-width: 768px) {
@@ -168,6 +178,7 @@ header h5 {
   display: inline-block;
   padding: 0 0 0 7px;
   margin: 25px 10px;
+  margin-bottom: 0;
 }
 
 #count {
