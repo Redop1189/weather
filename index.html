@@ -20,7 +20,7 @@
             </div>
         </div>
         <!-- card section  -->
-        <div class="showData">
+        <div class="showData threed" data-tilt data-tilt-scale="1.1">
             <!-- <div class="card">
                 <div class="cityHeading">
                     <h4 class="country">
@@ -47,5 +47,12 @@
     <!-- JavaScript -->
     <script src="./app.js"></script>
     <!-- <script src="./counter.js"></script> -->
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelector(".showData"), {
+		max: 25,
+		speed: 400
+	});
+    </script>
 </body>
 </html>
