@@ -112,3 +112,13 @@
 body {
   background: #ebeffc;
 }
+
+@media screen and (max-width: 768px) {
+  .button.none {
+    font-size: 40px;
+  }
+
+  .button.stemp {
+    font-size: 30px;
+  }
+}
