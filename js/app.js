@@ -31,14 +31,14 @@ button.addEventListener('click', () => {
                                         </h2>
                                 </div>
                                 <div class="temp">
-                                        <h2>${data.weather_info.current_observation.condition.temperature}° C</h2>
+                                        <h2 class="button fast none stemp">${data.weather_info.current_observation.condition.temperature}° C</h2>
                                         <h3 class="desc">
                                         ${data.weather_info.current_observation.condition.text}
                                         </h3>
                                 </div>
                             </div>
                             `;
-
+        document.querySelectorAll('.button').forEach(button => button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>');
     });
 
 });
