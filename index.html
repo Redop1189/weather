@@ -8,11 +8,12 @@
     <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/hover.css">
 </head>
 <body>
     <header>
-        <h1>Find <div class="hlt">Weather</div> in Your City</h1>
+        <h1>Find <div class="hlt button fast none">Weather</div> in Your City</h1>
         <div class="s-slider-search-form t-slider-search-form ">
             <div class="form">
                 <input type="text" class="inputTxt" placeholder="Enter City Name..." required>
@@ -45,14 +46,17 @@
         <a href="https://prathameshpawar.vercel.app" class="counter"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fweatherly-app.vercel.app&count_bg=%23FA5719&title_bg=%23555555&icon=webpack.svg&icon_color=%23E7E7E7&title=Visitors+count&edge_flat=true"/></a>
     </header>
     <!-- JavaScript -->
-    <script src="./app.js"></script>
-    <!-- <script src="./counter.js"></script> -->
-    <script type="text/javascript" src="vanilla-tilt.js"></script>
-    <script>
+    <script src="js/app.js"></script>
+    <!-- <script src="js/counter.js"></script> -->
+    <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
         VanillaTilt.init(document.querySelector(".showData"), {
 		max: 25,
 		speed: 400
 	});
+    </script>
+    <script type="text/javascript">
+        document.querySelectorAll('.button').forEach(button => button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>');
     </script>
 </body>
 </html>
