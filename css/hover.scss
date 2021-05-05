@@ -1,0 +1,89 @@
+.button {
+  &.dark {
+    --background: #2f3545;
+    --shadow: 0 2px 8px -1px #{rgba(#151924, 0.32)};
+    --shadow-hover: 0 4px 20px -2px #{rgba(#151924, 0.5)};
+  }
+  &.white {
+    --background: #fff;
+    --text: #275efe;
+    --shadow: 0 2px 8px -1px #{rgba(#121621, 0.04)};
+    --shadow-hover: 0 4px 20px -2px #{rgba(#121621, 0.02)};
+  }
+  &.none {
+    --background: none;
+    --text: #ffba00;
+    --shadow: 0 2px 8px -1px #{rgba(#275efe, 0.04)};
+    --shadow-hover: 0 5px 20px -2px #{rgba(#121621, 0.08)};
+    padding: 9px 18px;
+    border-radius: 10px;
+  }
+  &.fast {
+    --duration: 0.32s;
+  }
+}
+
+.button {
+  --background: #275efe;
+  --text: #fff;
+  --font-size: 60px;
+  --duration: 0.44s;
+  --move-hover: -4px;
+  --shadow: 0 2px 8px -1px #{rgba(#275efe, 0.32)};
+  --shadow-hover: 0 4px 20px -2px #{rgba(#275efe, 0.5)};
+  --font-shadow: var(--font-size);
+  padding: 16px 32px;
+  font-family: "poppins", "gilroy";
+  margin: 2rem;
+  font-weight: 600;
+  line-height: var(--font-size);
+  border-radius: 24px;
+  display: inline-block;
+  outline: none;
+  text-decoration: none;
+  font-size: var(--font-size);
+  letter-spacing: 0.5px;
+  background: var(--background);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  transform: translateY(var(--y)) translateZ(0);
+  transition: transform var(--duration) ease, box-shadow var(--duration) ease;
+  div {
+    display: flex;
+    overflow: hidden;
+    text-shadow: 0 var(--font-shadow) 0 var(--text);
+    span {
+      display: block;
+      backface-visibility: hidden;
+      font-style: normal;
+      transition: transform var(--duration) ease;
+      transform: translateY(var(--m)) translateZ(0);
+      $i: 1;
+      @while $i < 12 {
+        &:nth-child(#{$i}) {
+          transition-delay: $i / 20 + s;
+        }
+        $i: $i + 1;
+      }
+    }
+  }
+  &:hover {
+    --y: var(--move-hover);
+    --shadow: var(--shadow-hover);
+    span {
+      --m: calc(var(--font-size) * -1);
+    }
+  }
+  &.reverse {
+    --font-shadow: calc(var(--font-size) * -1);
+    &:hover {
+      span {
+        --m: calc(var(--font-size));
+      }
+    }
+  }
+}
+
+body {
+  background: #ebeffc;
+}
