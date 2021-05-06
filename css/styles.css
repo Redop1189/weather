@@ -145,7 +145,7 @@ button img {
   border-radius: 35px;
   padding: 28px 61px;
   align-self: center;
-  cursor: default;
+  cursor: cell;
   box-shadow: 0px 0px 50px rgba(102, 107, 208, 0.5);
   transition: 1s ease;
 }
